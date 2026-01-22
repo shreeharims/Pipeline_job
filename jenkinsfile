@@ -1,0 +1,22 @@
+pipeline {
+    agent any // Specifies that the pipeline can run on any available agent.
+    stages {
+        stage('plan') {
+            steps {
+                echo 'planning the application...' 
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Add your test commands here (e.g., 'sh "mvn test"').
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying to the environment...'
+                // Add your deployment commands here.
+            }
+        }
+    }
+}
